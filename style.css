@@ -63,7 +63,8 @@ br {
 @media only screen and (max-width: 767px)  {
 
   #first-row {
-    padding-top: 0px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
   }
 }
 
