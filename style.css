@@ -23,6 +23,20 @@ br {
   user-select: none;
 }
 
+header {
+  height:100vh;
+  min-height: 150px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + #about {
+  padding-top: 50px;
+}
 
 
 .parallax-section {
@@ -30,11 +44,11 @@ br {
   height: 500px;
   /* border: 20px solid red; */
   background-attachment: fixed !important;
-  /* background-position: top !important; */
+  background-position: top !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 
 .parallax-content {
@@ -66,8 +80,19 @@ br {
     margin-top: 20px !important;
     margin-bottom: 20px !important;
   }
+
+  #quote {
+    font-size: 20px;
+  }
+
 }
 
+
+
+@media only screen and (max-width: 640px)  {
+
+
+}
 
 
 

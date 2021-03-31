@@ -13,16 +13,26 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- for parallax -->
-    <script type="text/javascript" src="parallax.js"></script>
+    <!-- <script type="text/javascript" src="parallax.js"></script> -->
 
     <link rel="stylesheet" href="style.css">
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <body data-spy="scroll" data-target=".navbar" data-offset="110">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="position: sticky; margin-bottom: 0px;">
+  <body data-spy="scroll" data-target="#navbar" data-offset="10">
+
+    <header>
+      <div id="parallax-a" class="parallax-section" style="background:url(img/p4_2.png); height: 100%">
+        <div class="parallax-content">
+          <h1 style="margin-top: 0px; font-weight: bold; font-size: 60px;">Daniel Robert Jones</h1>
+          <p class="lead" style="margin:10px;">Peace Building. Scholarship. Activism.</p>
+        </div>
+      </div>
+    </header>
+
+    <nav id="navbar" class="navbar navbar-inverse navbar-static-top" style="margin-bottom: 0px;">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -43,16 +53,6 @@
         </div>
       </div>
     </nav>
-
-
-
-    <div id="parallax-a" class="parallax-section" style="background:url(img/p4_2.png); height: 800px; max-height: 100vh">
-      <div class="parallax-content">
-        <h1 style="margin-top: 0px; font-weight: bold; font-size: 60px;">Daniel Robert Jones</h1>
-        <p class="lead" style="margin:10px;">Peace Building. Scholarship. Activism.</p>
-      </div>
-    </div>
-
 
 
     <div id="about" class="container" style="margin-top: 0px">
@@ -151,9 +151,9 @@
 
     <div id="parallax-c" class="parallax-section" style="background:url(img/p3.jpeg)">
       <div class="parallax-content">
-        <div style="background-color: rgba(255, 255, 255, 0.75); display: inline-block; padding: 20px;">
-          <h1 style="font-style:italic">"Fighting for peace is like screwing for virginity."</h1>
-          <p class="lead">George Carlin</p>
+        <div style="background-color: rgba(255, 255, 255, 0.75); display: inline-block; padding: 20px; margin: 20px;">
+          <h1 id="quote" style="font-style:italic;">"A democracy cannot thrive where power remains unchecked and justice is reserved for a select few. Ignoring these cries and failing to respond to this movement is simply not an option — for peace cannot exist where justice is not served."</h1>
+          <p class="lead">Rep. John Lewis</p>
         </div>
       </div>
     </div>
@@ -217,10 +217,24 @@
 
   </body>
   <script type="text/javascript">
-  $(document).ready(function(){
-    $('#parallax-a').parallax("50%", 0.2, false);
-    $('#parallax-b').parallax("50%", 0.2, false);
-    $('#parallax-c').parallax("50%", 0.2, false);
-  })
+    // $(document).ready(function(){
+    //   $('#parallax-a').parallax("50%", 0.2, false);
+    //   $('#parallax-b').parallax("50%", 0.2, false);
+    //   $('#parallax-c').parallax("50%", 0.2, false);
+    // })
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    window.onscroll = function() {
+      if (window.pageYOffset >= window.innerHeight) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    };
+
+
+
 </script>
 </html>
