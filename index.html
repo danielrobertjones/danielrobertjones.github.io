@@ -12,27 +12,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <!-- for parallax -->
-    <!-- <script type="text/javascript" src="parallax.js"></script> -->
-
     <link rel="stylesheet" href="style.css">
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <body data-spy="scroll" data-target="#navbar" data-offset="10">
+  <body data-spy="scroll" data-target=".navbar" data-offset="10">
 
-    <header>
-      <div id="parallax-a" class="parallax-section" style="background:url(img/p4_2.png); height: 100%">
-        <div class="parallax-content">
-          <h1 style="margin-top: 0px; font-weight: bold; font-size: 60px;">Daniel Robert Jones</h1>
-          <p class="lead" style="margin:10px;">Peace Building. Scholarship. Activism.</p>
-        </div>
+    <div id="parallax-a" class="parallax-section" style="background:url(img/p4_2.png); height: 100vh;">
+      <div class="parallax-content">
+        <h1 style="margin-top: 0px; font-weight: bold; font-size: 60px;">Daniel Robert Jones</h1>
+        <p class="lead" style="margin:10px;">Peace Building. Scholarship. Activism.</p>
       </div>
-    </header>
+    </div>
 
-    <nav id="navbar" class="navbar navbar-inverse navbar-static-top" style="margin-bottom: 0px;">
+    <nav class="navbar navbar-inverse navbar-static-top" style="margin-bottom: 0px;">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -223,14 +218,13 @@
     //   $('#parallax-c').parallax("50%", 0.2, false);
     // })
 
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
+    var nav = document.getElementsByTagName("nav")[0];
 
     window.onscroll = function() {
       if (window.pageYOffset >= window.innerHeight) {
-        navbar.classList.add("sticky")
+        nav.classList.add("sticky")
       } else {
-        navbar.classList.remove("sticky");
+        nav.classList.remove("sticky");
       }
     };
 

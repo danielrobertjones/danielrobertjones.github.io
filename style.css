@@ -23,10 +23,6 @@ br {
   user-select: none;
 }
 
-header {
-  height:100vh;
-  min-height: 150px;
-}
 
 .sticky {
   position: fixed;
@@ -54,7 +50,6 @@ header {
 
   display: flex;
   align-items: center;
-
 }
 
 
